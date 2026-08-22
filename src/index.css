@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-foldit: "Foldit", serif;
+
+  --color-agency-bg: #0b0c0e;
+  --color-agency-red: #dc2626;
+  --color-agency-orange: #ea580c;
+  --color-agency-card: #16181d;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-agency-bg);
+    color: #e5e7eb;
+    font-family: var(--font-foldit);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+  }
+}

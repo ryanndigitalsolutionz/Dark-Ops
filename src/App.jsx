@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import OperationForm from "./components/OperationForm";
 import OperationList from "./components/OperationList";
 import "./App.css";

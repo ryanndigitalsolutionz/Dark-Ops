@@ -1,4 +1,3 @@
-import React from "react";
 import OperationCard from "./OperationCard";
 
 function OperationList({ missions, searchQuery, onSearchChange, onUpdateMission, onDeleteMission }) {

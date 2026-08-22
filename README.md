@@ -2,6 +2,11 @@
 
 DarkOps is an **ITDM&R (Insider Threat Detection, Management & Response)** platform designed to act as a security layer for applications, websites, devices, and services.
 
+🌑 Permanent dark theme
+🟠 Foldit as the primary/entire UI typeface
+🟠 Bronze/orange borders and accents
+⚫ Near-black surfaces
+
 It is intended to align with the **NIST Cybersecurity Framework (CSF) 2.0** and relevant **CISA** incident-response practices.
 
 ## Core Purpose

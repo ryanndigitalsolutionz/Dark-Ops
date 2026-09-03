@@ -84,3 +84,20 @@ Reviewed
                          ┌────────────┴────────────┐
                          │                         │
                       KLuv AI              Other Applications
+```
+
+## Additional functions for DarkOps
+
+4 foreign APIs are to boost DarkOps functionality, but what makes DarkOps unique from other services like CrowdStrike, Microsoft Pursuit, Proofpoint ITM, CyberHaven and DTEX Systems? That's the DarkOps DNA! As I continue improving this in Rust, here are the features it will have in store for any organization (for cheap):
+
+```Python tools for DarkOps
+| Module | Core Python Library | Core Rust Crate | Zero-API Mechanism |
+| :--- | :--- | :--- | :--- |
+| **DLP** | `watchdog` + `re` | `notify` + `regex` | OS-native event hooks (`inotify`/`ReadDirectoryChangesW`) for zero-latency file scanning |
+| **Credential Vaulting** | `cryptography.fernet` | `ring` / `aes-gcm` / `fernet` | Bare-metal AES-256-GCM / HMAC encryption with thread-safe ephemeral memory buffers |
+| **Process Lineage** | `psutil` | `sysinfo` / `procfs` | Inspecting process trees directly via system kernel memory with zero runtime overhead |
+| **Immutable Logging** | `hashlib` | `sha2` | High-speed SHA-256 block-linked hash chains written directly to binary audit logs |
+| **Automated Containment** | `psutil` + `os` | `nix` / `windows-sys` | Native OS syscalls (`kill`, `ptrace`, `TerminateProcess`) for sub-millisecond process intervention |
+```
+
+---

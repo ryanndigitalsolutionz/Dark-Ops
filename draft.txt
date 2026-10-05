@@ -1,0 +1,53 @@
+__Website__
+
+A01 Broken Access Control
+A02 Security Misconfiguration
+Authentication/session behavior
+TLS/HTTPS
+Security headers
+CORS
+Cookies
+API exposure
+Error/debug exposure
+Deployment/integrity changes
+Public infrastructure changes
+
+
+__Android__
+APK integrity
+Permissions
+Exported components
+Network security configuration
+Cleartext traffic
+WebView/security configuration
+Package/signing/version changes
+Device security state
+Optional runtime/network observations
+
+__Enrichment__
+IPInfo
+REST Countries
+HIBP
+Customer-provided Assets
+Brave Answers
+
+
+
+
+
+
+
+
+
+
+
+Total customer storage: 500 MB
+Individual document:     10 MB
+Individual image:        10 MB
+Individual video:        50 MB
+
+DarkOps Glacier
+    ↓
+DarkOps Nightwatch
+    ↓
+DarkOps Core

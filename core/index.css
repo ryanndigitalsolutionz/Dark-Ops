@@ -6,7 +6,9 @@
 }
 
 @theme {
+  --font-montserrat: "Montserrat Alternates", sans-serif;
   --font-foldit: "Foldit", serif;
+  --font-gabriela: "Gabriela", serif;
 
   --color-agency-bg: #0b0c0e;
   --color-agency-red: #dc2626;
@@ -18,7 +20,7 @@
   body {
     background-color: var(--color-agency-bg);
     color: #e5e7eb;
-    font-family: var(--font-foldit);
+    font-family: var(--font-montserrat);
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;

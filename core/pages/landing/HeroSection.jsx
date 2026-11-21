@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "react-router"
 import { cn } from "@/lib/utils"
 import { FiChevronRight } from "react-icons/fi";
-import DashboardPreview from "../center/homepage/DashboardPreview";
+import DashboardPreview from "./DashboardPreview";
 
 const RetroGrid = ({
   angle = 65,
@@ -110,7 +110,7 @@ const HeroSection = React.forwardRef(
                   dark:via-[#C65A24]/10
                   dark:text-[#B6B1AC]
                 "
-                style={{ fontFamily: "Inter, sans-serif" }}
+                style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
               >
                 <span>DarkOps</span>
 
@@ -159,7 +159,7 @@ const HeroSection = React.forwardRef(
                   dark:text-[#B6B1AC]
                   md:text-lg
                 "
-                style={{ fontFamily: "Inter, sans-serif" }}
+                style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
               >
                 {description}
               </p>
@@ -167,7 +167,7 @@ const HeroSection = React.forwardRef(
               {/* Authentication actions */}
               <div
                 className="flex items-center justify-center gap-3 pt-3"
-                style={{ fontFamily: "Inter, sans-serif" }}
+                style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
               >
 
                 {/* Log In */}

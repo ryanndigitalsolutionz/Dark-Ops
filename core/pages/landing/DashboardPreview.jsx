@@ -18,19 +18,36 @@ const securityActivity = [
   { time: "24:00", events: 67 },
 ];
 
+const montserrat = {
+  fontFamily: "Montserrat Alternates, sans-serif",
+};
+
+const foldit = {
+  fontFamily: "Foldit, sans-serif",
+};
+
 function StatCard({ label, value, detail }) {
   return (
     <div className="rounded-xl border border-[#8A8580]/20 bg-white/70 p-5 backdrop-blur-xl dark:bg-[#151515]/80">
-      <p className="text-xs font-medium uppercase tracking-wider text-[#8A8580]">
+      <p
+        className="text-xs font-medium uppercase tracking-wider text-[#8A8580]"
+        style={montserrat}
+      >
         {label}
       </p>
 
-      <p className="mt-2 text-2xl font-semibold text-[#1A1A1A] dark:text-white">
+      <p
+        className="mt-2 text-2xl font-semibold text-[#1A1A1A] dark:text-white"
+        style={montserrat}
+      >
         {value}
       </p>
 
       {detail && (
-        <p className="mt-1 text-xs text-[#8A8580]">
+        <p
+          className="mt-1 text-xs text-[#8A8580]"
+          style={montserrat}
+        >
           {detail}
         </p>
       )}
@@ -45,16 +62,25 @@ function DashboardPreview() {
       {/* Header */}
       <div className="flex items-center justify-between border-b border-[#8A8580]/20 px-6 py-4">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8A8580]">
+          <p
+            className="text-xs uppercase tracking-[0.2em] text-[#8A8580]"
+            style={montserrat}
+          >
             DarkOps
           </p>
 
-          <h3 className="mt-1 text-lg font-semibold text-[#1A1A1A] dark:text-white">
+          <h3
+            className="mt-1 text-lg text-[#1A1A1A] dark:text-white"
+            style={foldit}
+          >
             Security Command Center
           </h3>
         </div>
 
-        <div className="flex items-center gap-2 text-xs text-[#8A8580]">
+        <div
+          className="flex items-center gap-2 text-xs text-[#8A8580]"
+          style={montserrat}
+        >
           <span className="h-2 w-2 rounded-full bg-green-500" />
           Systems Operational
         </div>
@@ -87,19 +113,28 @@ function DashboardPreview() {
         />
       </div>
 
-      {/* Graph */}
+      {/* Security Activity */}
       <div className="mx-5 mb-5 rounded-xl border border-[#8A8580]/20 bg-black/[0.02] p-5 dark:bg-white/[0.02]">
         <div className="mb-5">
-          <p className="text-xs uppercase tracking-[0.15em] text-[#8A8580]">
+          <p
+            className="text-xs uppercase tracking-[0.15em] text-[#8A8580]"
+            style={montserrat}
+          >
             Security Activity
           </p>
 
           <div className="mt-1 flex items-end justify-between">
-            <h4 className="text-xl font-semibold text-[#1A1A1A] dark:text-white">
+            <h4
+              className="text-xl text-[#1A1A1A] dark:text-white"
+              style={foldit}
+            >
               Events detected
             </h4>
 
-            <span className="text-xs text-[#8A8580]">
+            <span
+              className="text-xs text-[#8A8580]"
+              style={montserrat}
+            >
               Last 24 hours
             </span>
           </div>
@@ -109,7 +144,13 @@ function DashboardPreview() {
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={securityActivity}>
               <defs>
-                <linearGradient id="darkOpsActivity" x1="0" y1="0" x2="0" y2="1">
+                <linearGradient
+                  id="darkOpsActivity"
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="1"
+                >
                   <stop
                     offset="0%"
                     stopColor="#C65A24"
@@ -134,13 +175,21 @@ function DashboardPreview() {
                 dataKey="time"
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: "#8A8580", fontSize: 11 }}
+                tick={{
+                  fill: "#8A8580",
+                  fontSize: 11,
+                  fontFamily: "Montserrat Alternates, sans-serif",
+                }}
               />
 
               <YAxis
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: "#8A8580", fontSize: 11 }}
+                tick={{
+                  fill: "#8A8580",
+                  fontSize: 11,
+                  fontFamily: "Montserrat Alternates, sans-serif",
+                }}
               />
 
               <Tooltip
@@ -149,6 +198,7 @@ function DashboardPreview() {
                   border: "1px solid #8A8580",
                   borderRadius: "10px",
                   color: "#FFFFFF",
+                  fontFamily: "Montserrat Alternates, sans-serif",
                 }}
               />
 
@@ -164,16 +214,23 @@ function DashboardPreview() {
         </div>
       </div>
 
-      {/* Activity */}
+      {/* Lower Information */}
       <div className="grid gap-5 border-t border-[#8A8580]/20 p-5 md:grid-cols-2">
 
+        {/* Recent Activity */}
         <div>
-          <p className="text-xs uppercase tracking-[0.15em] text-[#8A8580]">
+          <p
+            className="text-xs uppercase tracking-[0.15em] text-[#8A8580]"
+            style={montserrat}
+          >
             Recent Activity
           </p>
 
           <div className="mt-4 space-y-3">
-            <div className="flex justify-between text-sm">
+            <div
+              className="flex justify-between text-sm"
+              style={montserrat}
+            >
               <span className="text-[#1A1A1A] dark:text-white">
                 Suspicious login detected
               </span>
@@ -183,7 +240,10 @@ function DashboardPreview() {
               </span>
             </div>
 
-            <div className="flex justify-between text-sm">
+            <div
+              className="flex justify-between text-sm"
+              style={montserrat}
+            >
               <span className="text-[#1A1A1A] dark:text-white">
                 Asset vulnerability recorded
               </span>
@@ -193,7 +253,10 @@ function DashboardPreview() {
               </span>
             </div>
 
-            <div className="flex justify-between text-sm">
+            <div
+              className="flex justify-between text-sm"
+              style={montserrat}
+            >
               <span className="text-[#1A1A1A] dark:text-white">
                 Incident status updated
               </span>
@@ -205,38 +268,51 @@ function DashboardPreview() {
           </div>
         </div>
 
+        {/* Protection Status */}
         <div>
-          <p className="text-xs uppercase tracking-[0.15em] text-[#8A8580]">
+          <p
+            className="text-xs uppercase tracking-[0.15em] text-[#8A8580]"
+            style={montserrat}
+          >
             Protection Status
           </p>
 
           <div className="mt-4 space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-[#1A1A1A] dark:text-white">
+            <div
+              className="flex items-center justify-between text-sm"
+              style={montserrat}
+            >
+              <span className="text-[#1A1A1A] dark:text-white">
                 Applications
               </span>
 
-              <span className="text-sm text-green-500">
+              <span className="text-green-500">
                 17 / 18
               </span>
             </div>
 
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-[#1A1A1A] dark:text-white">
+            <div
+              className="flex items-center justify-between text-sm"
+              style={montserrat}
+            >
+              <span className="text-[#1A1A1A] dark:text-white">
                 Assets
               </span>
 
-              <span className="text-sm text-green-500">
+              <span className="text-green-500">
                 42 / 42
               </span>
             </div>
 
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-[#1A1A1A] dark:text-white">
+            <div
+              className="flex items-center justify-between text-sm"
+              style={montserrat}
+            >
+              <span className="text-[#1A1A1A] dark:text-white">
                 Critical incidents
               </span>
 
-              <span className="text-sm text-[#C65A24]">
+              <span className="text-[#C65A24]">
                 1 open
               </span>
             </div>

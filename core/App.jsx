@@ -1,7 +1,11 @@
+// App.jsx
 import { createBrowserRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./pages/landing/HeroSection";
+import Login from "./pages/authentication/Login";
+import Register from "./pages/authentication/Register";
+
 import "./App.css";
 
 function LandingPage() {
@@ -28,11 +32,22 @@ function LandingPage() {
 
 function PlaceholderPage({ title }) {
   return (
-    <main className="min-h-screen bg-[#1A1A1A] text-white p-10">
-      <h1 className="text-4xl font-semibold">{title}</h1>
-      <p className="mt-4 text-[#8A8580]">
-        This DarkOps module is under construction.
-      </p>
+    <main className="flex min-h-screen items-center justify-center bg-[#1A1A1A] px-6 text-white">
+      <div className="text-center">
+        <h1
+          className="text-4xl"
+          style={{ fontFamily: "Foldit, sans-serif" }}
+        >
+          {title}
+        </h1>
+
+        <p
+          className="mt-3 text-sm text-[#8A8580]"
+          style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
+        >
+          This DarkOps page is under construction.
+        </p>
+      </div>
     </main>
   );
 }
@@ -42,77 +57,147 @@ const router = createBrowserRouter([
     path: "/",
     element: <Outlet />,
     children: [
+      // Landing
       {
         index: true,
         element: <LandingPage />,
       },
 
+      // Authentication
       {
         path: "login",
-        element: <PlaceholderPage title="Log In" />,
+        element: <Login />,
       },
       {
         path: "signup",
-        element: <PlaceholderPage title="Sign Up" />,
+        element: <Register />,
+      },
+      {
+        path: "forgot-question",
+        element: <PlaceholderPage title="Forgot Question" />,
+      },
+      {
+        path: "verify",
+        element: <PlaceholderPage title="Verify Account" />,
+      },
+      {
+        path: "security-question",
+        element: <PlaceholderPage title="Security Question" />,
+      },
+      {
+        path: "forgot-password",
+        element: <PlaceholderPage title="Forgot Password" />,
+      },
+      {
+        path: "reset-password",
+        element: <PlaceholderPage title="Reset Password" />,
+      },
+      {
+        path: "reset-question",
+        element: <PlaceholderPage title="Reset Question" />,
       },
 
-      // Core DarkOps modules
+      // Homepage
       {
         path: "dashboard",
         element: <PlaceholderPage title="Command Center" />,
       },
       {
-        path: "security-posture",
-        element: <PlaceholderPage title="Security Posture" />,
+        path: "profile",
+        element: <PlaceholderPage title="Profile" />,
       },
+      {
+        path: "help-center",
+        element: <PlaceholderPage title="Help Center" />,
+      },
+      {
+        path: "pwn-test",
+        element: <PlaceholderPage title="Pwn Test" />,
+      },
+
+      // Applications
       {
         path: "applications",
         element: <PlaceholderPage title="Applications" />,
       },
+
+      // Security
       {
-        path: "assets",
-        element: <PlaceholderPage title="Assets" />,
+        path: "security/policies",
+        element: <PlaceholderPage title="Security Policies" />,
       },
+      {
+        path: "security/threat-detection",
+        element: <PlaceholderPage title="Threat Detection" />,
+      },
+      {
+        path: "security/team",
+        element: <PlaceholderPage title="Security Team" />,
+      },
+      {
+        path: "security/settings",
+        element: <PlaceholderPage title="Security Settings" />,
+      },
+
+      // Events
       {
         path: "events",
         element: <PlaceholderPage title="Events" />,
       },
       {
-        path: "alerts",
-        element: <PlaceholderPage title="Alerts" />,
-      },
-      {
-        path: "incidents",
+        path: "events/incidents",
         element: <PlaceholderPage title="Incidents" />,
       },
       {
-        path: "vulnerabilities",
+        path: "events/alerts",
+        element: <PlaceholderPage title="Alerts" />,
+      },
+      {
+        path: "events/vulnerabilities",
         element: <PlaceholderPage title="Vulnerabilities" />,
       },
       {
-        path: "intelligence",
-        element: <PlaceholderPage title="Threat Intelligence" />,
+        path: "events/notifications",
+        element: <PlaceholderPage title="Notifications" />,
       },
+
+      // Audit Logs
       {
         path: "audit-logs",
         element: <PlaceholderPage title="Audit Logs" />,
       },
       {
-        path: "organization",
-        element: <PlaceholderPage title="Organization" />,
+        path: "audit-logs/unread",
+        element: <PlaceholderPage title="Unread" />,
       },
       {
-        path: "team",
-        element: <PlaceholderPage title="Team & Roles" />,
+        path: "audit-logs/recents",
+        element: <PlaceholderPage title="Recent Audit Logs" />,
       },
       {
-        path: "integrations",
-        element: <PlaceholderPage title="Integrations" />,
+        path: "audit-logs/trash",
+        element: <PlaceholderPage title="Trash" />,
       },
       {
-        path: "settings",
-        element: <PlaceholderPage title="Settings" />,
+        path: "audit-logs/scheduled",
+        element: <PlaceholderPage title="Scheduled" />,
       },
+      {
+        path: "audit-logs/library",
+        element: <PlaceholderPage title="Audit Library" />,
+      },
+      {
+        path: "audit-logs/compose",
+        element: <PlaceholderPage title="Compose Audit Log" />,
+      },
+
+      // Extensions
+      {
+        path: "extensions",
+        element: <PlaceholderPage title="Extensions" />,
+      },
+
+      // Demo
       {
         path: "demo",
         element: <PlaceholderPage title="Demo Environment" />,

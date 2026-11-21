@@ -8,7 +8,7 @@ function HeroSectionDemo() {
         regular: "Security for the systems ",
         gradient: "you entrust.",
       }}
-      description="Monitor security activity, investigate incidents, and maintain visibility across the applications and systems connected to DarkOps."
+      description="Monitor security state, investigate incidents, and maintain visibility across the applications and systems connected to DarkOps."
       loginHref="/login"
       signupHref="/signup"
       gridOptions={{
